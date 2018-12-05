@@ -1,0 +1,22 @@
+<import name="my-footer" src="../components/Footer"></import>
+
+<template>
+	<div class="page-main">
+		<div class="tabslist">
+			<text>这是个人中心</text>
+		</div>
+		<my-footer now=1></my-footer>
+	</div>
+</template>
+<style>
+	.page-main {
+		color: #80bd01;
+	}
+</style>
+<script>
+	export default {
+		private: {
+
+		}
+	}
+</script>

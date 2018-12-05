@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <text style="font-size: 50px">{{prop1}}</text>
+  </div>
+</template>
+<script>
+  export default {
+    props: {
+      prop1: {
+        type: String,
+        required: true,
+        validator: (value)=> {
+          return value !== 'haha';
+        },
+        default: 'hello component'
+      }
+    }
+  }
+</script>
