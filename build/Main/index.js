@@ -97,7 +97,126 @@
 /***/ (function(module, exports) {
 
 module.exports = {
+  "tabs": {
+    "width": "100%",
+    "height": "100%"
+  },
+  ".footer-container": {
+    "height": "120px",
+    "backgroundColor": "#444444"
+  },
+  ".tab-btn": {
+    "width": "200px",
+    "display": "flex",
+    "flexGrow": 1,
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  ".tab-btn .icon": {
+    "width": "44px",
+    "height": "44px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tab-btn"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "icon"
+        }
+      ]
+    }
+  },
+  ".icon1": {
+    "backgroundImage": "/images/list.png"
+  },
+  ".icon2": {
+    "backgroundImage": "/images/my.png"
+  },
+  ".icon1-active": {
+    "backgroundImage": "/images/list_1.png"
+  },
+  ".icon2-active": {
+    "backgroundImage": "/images/list_2.png"
+  },
+  ".tab-btn text": {
+    "color": "#ffffff",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tab-btn"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "text"
+        }
+      ]
+    }
+  },
+  ".active text": {
+    "color": "#80bd01",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "active"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "text"
+        }
+      ]
+    }
+  },
+  ".footer-container image": {
+    "width": "44px",
+    "height": "44px",
+    "display": "flex",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "footer-container"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "image"
+        }
+      ]
+    }
+  },
   ".page-main": {
+    "height": "100%",
     "color": "#80bd01"
   },
   "refresh": {
@@ -140,106 +259,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/components/Footer/index.ux?uxType=comp":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/components/Footer/index.ux?uxType=comp ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = {
-  ".footer": {
-    "display": "flex",
-    "width": "100%",
-    "height": "120px",
-    "position": "fixed",
-    "bottom": "0px",
-    "left": "0px",
-    "flexDirection": "row",
-    "justifyContent": "space-around",
-    "backgroundColor": "#444444"
-  },
-  "image": {
-    "width": "44px",
-    "height": "44px",
-    "display": "flex"
-  },
-  ".footer text": {
-    "color": "#ffffff",
-    "_meta": {
-      "ruleDef": [
-        {
-          "t": "a",
-          "n": "class",
-          "i": false,
-          "a": "element",
-          "v": "footer"
-        },
-        {
-          "t": "d"
-        },
-        {
-          "t": "t",
-          "n": "text"
-        }
-      ]
-    }
-  },
-  ".btn": {
-    "width": "200px",
-    "display": "flex",
-    "flexGrow": 1,
-    "flexDirection": "column",
-    "justifyContent": "center",
-    "alignItems": "center"
-  },
-  ".btn text": {
-    "marginTop": "4px",
-    "fontSize": "24px",
-    "_meta": {
-      "ruleDef": [
-        {
-          "t": "a",
-          "n": "class",
-          "i": false,
-          "a": "element",
-          "v": "btn"
-        },
-        {
-          "t": "d"
-        },
-        {
-          "t": "t",
-          "n": "text"
-        }
-      ]
-    }
-  },
-  ".active text": {
-    "color": "#80bd01",
-    "_meta": {
-      "ruleDef": [
-        {
-          "t": "a",
-          "n": "class",
-          "i": false,
-          "a": "element",
-          "v": "active"
-        },
-        {
-          "t": "d"
-        },
-        {
-          "t": "t",
-          "n": "text"
-        }
-      ]
-    }
-  }
-}
-
-/***/ }),
-
 /***/ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page ***!
@@ -248,113 +267,160 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
-  "type": "refresh",
+  "type": "tabs",
   "attr": {
-    "refreshing": function () {return this.isRefreshing}
+    "index": function () {return this.now}
   },
   "events": {
-    "refresh": "refresh"
+    "change": "changeTab"
   },
   "children": [
     {
-      "type": "list",
+      "type": "tab-content",
       "attr": {},
       "classList": [
-        "main-page"
+        "content-container"
       ],
-      "events": {
-        "scrollbottom": "loadMoreData"
-      },
       "children": [
         {
-          "type": "block",
+          "type": "div",
           "attr": {},
-          "repeat": function () {return this.articleList},
           "children": [
             {
-              "type": "list-item",
+              "type": "refresh",
               "attr": {
-                "type": "article"
+                "refreshing": function () {return this.isRefreshing}
               },
-              "classList": [
-                "article-item"
-              ],
               "events": {
-                "click": "openAricle"
+                "refresh": "refresh"
               },
               "children": [
                 {
-                  "type": "image",
-                  "attr": {
-                    "src": function () {return this.$item.author.avatar_url}
-                  },
+                  "type": "list",
+                  "attr": {},
                   "classList": [
-                    "avatar-icon"
+                    "main-page"
                   ],
                   "events": {
-                    "click": function (evt) {this.clickCollect(this.$item,evt)}
-                  }
-                },
-                {
-                  "type": "text",
-                  "attr": {
-                    "value": function () {return this.$item.title}
+                    "scrollbottom": "loadMoreData"
                   },
-                  "classList": [
-                    "articie-title"
+                  "children": [
+                    {
+                      "type": "block",
+                      "attr": {},
+                      "repeat": function () {return this.articleList},
+                      "children": [
+                        {
+                          "type": "list-item",
+                          "attr": {
+                            "type": "article"
+                          },
+                          "classList": [
+                            "article-item"
+                          ],
+                          "events": {
+                            "click": "openAricle"
+                          },
+                          "children": [
+                            {
+                              "type": "image",
+                              "attr": {
+                                "src": function () {return this.$item.author.avatar_url}
+                              },
+                              "classList": [
+                                "avatar-icon"
+                              ],
+                              "events": {
+                                "click": function (evt) {this.clickCollect(this.$item,evt)}
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": function () {return this.$item.title}
+                              },
+                              "classList": [
+                                "articie-title"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "div",
+          "attr": {},
+          "children": [
+            {
+              "type": "text",
+              "attr": {
+                "value": "这是第二页"
+              }
             }
           ]
         }
       ]
     },
     {
-      "type": "my-footer",
-      "attr": {
-        "now": "0"
-      }
-    }
-  ]
-}
-
-/***/ }),
-
-/***/ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/components/Footer/index.ux?uxType=comp":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/components/Footer/index.ux?uxType=comp ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = {
-  "type": "div",
-  "attr": {},
-  "classList": [
-    "footer"
-  ],
-  "children": [
-    {
-      "type": "div",
+      "type": "tab-bar",
       "attr": {},
-      "repeat": function () {return this.btnlist},
-      "events": {
-        "click": function (evt) {this.routerpush(this.$item.to,this.$idx,evt)}
-      },
-      "classList": function () {return ['btn', this.now==this.$idx?'active':'']},
+      "classList": [
+        "footer-container"
+      ],
       "children": [
         {
-          "type": "image",
-          "attr": {
-            "src": function () {return '/images/' + (this.now==this.$idx?this.$item.png+'_1':this.$item.png) + '.png'}
-          }
+          "type": "div",
+          "attr": {},
+          "classList": [
+            "tab-btn"
+          ],
+          "children": [
+            {
+              "type": "image",
+              "attr": {
+                "src": function () {return '/images/list' + (this.now==0?'_1':'') + '.png'}
+              }
+            },
+            {
+              "type": "text",
+              "attr": {
+                "value": "全部"
+              },
+              "style": {
+                "color": function () {return this.now==0?'#80bd01':'#fff'}
+              }
+            }
+          ]
         },
         {
-          "type": "text",
-          "attr": {
-            "value": function () {return this.$item.text}
-          }
+          "type": "div",
+          "attr": {},
+          "classList": [
+            "tab-btn"
+          ],
+          "children": [
+            {
+              "type": "image",
+              "attr": {
+                "src": function () {return '/images/my' + (this.now==1?'_1':'') + '.png'}
+              }
+            },
+            {
+              "type": "text",
+              "attr": {
+                "value": "我的"
+              },
+              "style": {
+                "color": function () {return this.now==1?'#80bd01':'#fff'}
+              }
+            }
+          ]
         }
       ]
     }
@@ -363,10 +429,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib/index.js?plugins[]=F:\\my\\work\\cnodejs-quickapp\\node_modules\\_hap-toolkit@0.0.38@hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib?plugins[]=F:/my/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib/index.js?plugins[]=/home/mi/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib?plugins[]=/home/mi/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -391,13 +457,17 @@ var _default = {
     articleList: [],
     page: 0,
     limit: 20,
-    hasMoreData: true
+    hasMoreData: true,
+    now: 0
   },
   onInit: function onInit() {
     this.refresh();
     this.$page.setTitleBar({
       text: '全部'
     });
+  },
+  changeTab: function changeTab(nowIndex) {
+    this.now = nowIndex.index;
   },
   refresh: function refresh() {
     console.log("shuaxingshuaxing");
@@ -487,73 +557,6 @@ if (moduleOwn.data && accessors.some(function (acc) {
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib/index.js?plugins[]=F:\\my\\work\\cnodejs-quickapp\\node_modules\\_hap-toolkit@0.0.38@hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/components/Footer/index.ux?uxType=comp":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib?plugins[]=F:/my/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/components/Footer/index.ux?uxType=comp ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module, exports, $app_require$){"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _system = _interopRequireDefault($app_require$("@app-module/system.router"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _default = {
-  props: ["now"],
-  data: function data() {
-    return {
-      btnlist: [{
-        text: '全部',
-        png: 'list',
-        to: '/'
-      }, {
-        text: '我的',
-        png: 'my',
-        to: '/My'
-      }]
-    };
-  },
-  onInit: function onInit() {},
-  routerpush: function routerpush(to, index) {
-    _system.default.replace({
-      uri: to
-    });
-  }
-};
-exports.default = _default;}
-
-/***/ }),
-
-/***/ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/ux-loader.js?type=import!./src/components/Footer/index.ux?uxType=comp&name=my-footer":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/ux-loader.js?type=import!./src/components/Footer/index.ux?uxType=comp&name=my-footer ***!
-  \*************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $app_template$ = __webpack_require__(/*! !../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=comp */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/components/Footer/index.ux?uxType=comp")
-var $app_style$ = __webpack_require__(/*! !../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=comp */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/components/Footer/index.ux?uxType=comp")
-var $app_script$ = __webpack_require__(/*! !../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!../../../node_modules/babel-loader?plugins[]=F:/my/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!../../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=comp */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib/index.js?plugins[]=F:\\my\\work\\cnodejs-quickapp\\node_modules\\_hap-toolkit@0.0.38@hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/components/Footer/index.ux?uxType=comp")
-
-$app_define$('@app-component/my-footer', [], function($app_require$, $app_exports$, $app_module$){
-     $app_script$($app_module$, $app_exports$, $app_require$)
-     if ($app_exports$.__esModule && $app_exports$.default) {
-            $app_module$.exports = $app_exports$.default
-        }
-     $app_module$.exports.template = $app_template$
-     $app_module$.exports.style = $app_style$
-})
-
-
-/***/ }),
-
 /***/ "./src/Main/index.ux?uxType=page":
 /*!***************************************!*\
   !*** ./src/Main/index.ux?uxType=page ***!
@@ -561,10 +564,9 @@ $app_define$('@app-component/my-footer', [], function($app_require$, $app_export
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! !../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/ux-loader.js?type=import!../components/Footer/index.ux?uxType=comp&name=my-footer */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/ux-loader.js?type=import!./src/components/Footer/index.ux?uxType=comp&name=my-footer")
 var $app_template$ = __webpack_require__(/*! !../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=page */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page")
 var $app_style$ = __webpack_require__(/*! !../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=page */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/Main/index.ux?uxType=page")
-var $app_script$ = __webpack_require__(/*! !../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!../../node_modules/babel-loader?plugins[]=F:/my/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=page */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib/index.js?plugins[]=F:\\my\\work\\cnodejs-quickapp\\node_modules\\_hap-toolkit@0.0.38@hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page")
+var $app_script$ = __webpack_require__(/*! !../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!../../node_modules/babel-loader?plugins[]=/home/mi/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!../../node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=page */ "./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.4@babel-loader/lib/index.js?plugins[]=/home/mi/work/cnodejs-quickapp/node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.0.38@hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page")
 
 $app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
      $app_script$($app_module$, $app_exports$, $app_require$)
