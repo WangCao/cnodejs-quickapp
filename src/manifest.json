@@ -29,6 +29,9 @@
       "My": {
         "component": "index"
       },
+      "Detail": {
+        "component": "index"
+      },
       "DemoDetail": {
         "component": "index"
       },
@@ -55,8 +58,10 @@
         "titleBarText": "示例页",
         "menu": false
       },
-      "DemoDetail": {
-        "titleBarText": "详情页"
+      "Detail": {
+        
+        "titleBarBackgroundColor": "#444",
+        "titleBarTextColor": "#fff"
       },
       "About": {
         "menu": false

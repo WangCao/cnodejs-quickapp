@@ -319,7 +319,7 @@ module.exports = {
                             "article-item"
                           ],
                           "events": {
-                            "click": "openAricle"
+                            "click": function (evt) {this.openAricle(this.$item.id,this.$item.title,evt)}
                           },
                           "children": [
                             {
@@ -447,6 +447,8 @@ var _system = _interopRequireDefault($app_require$("@app-module/system.fetch"));
 
 var _system2 = _interopRequireDefault($app_require$("@app-module/system.vibrator"));
 
+var _system3 = _interopRequireDefault($app_require$("@app-module/system.router"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -517,8 +519,14 @@ var _default = {
       }
     });
   },
-  openAricle: function openAricle() {
-    console.info("\u8FDB\u5165\u6587\u7AE0\u8BE6\u60C5");
+  openAricle: function openAricle(id, title) {
+    _system3.default.push({
+      uri: '/Detail',
+      params: {
+        articleid: id,
+        title: title
+      }
+    });
   },
   loadMoreData: function loadMoreData() {
     if (this.hasMoreData) {

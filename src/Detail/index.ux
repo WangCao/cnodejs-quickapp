@@ -1,0 +1,105 @@
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div class="detail">
+    <div class="title">
+      <text>{{title}}</text>
+    </div>
+    <div class="info">
+        <image src="{{avatar_url}}" />
+        <text class="name">{{loginname}}</text>
+        <text class="time">{{create_at}}</text>
+    </div>
+    <div class="content">
+      <richtext type="html">
+        {{content}}
+      </richtext>
+    </div>
+  </div>
+</template>
+
+<style>
+  .detail {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+  .title text{
+    color: #000;
+    font-size: 40px;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .info {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: nowrap;
+  }
+  .info image {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    margin-left: 20px;
+  }
+  .info text {
+    color: #333;
+    lines: 1;
+    text-overflow: ellipsis;
+    margin-left: 20px;
+  }
+  .name {
+    flex-shrink: 0;
+  }
+  .time {
+    
+  }
+  .content {
+    margin-top: 30px;
+  }
+  richtext {
+    font-size: 50px;
+  }
+</style>
+
+<script>
+  import fetch from '@system.fetch'
+  export default {
+    private: {
+      content: '',
+      create_at: '',
+      avatar_url: '',
+      loginname: ''
+    },
+    protected: {
+      articleid: '',
+      title: ''
+    },
+    onInit() {
+      this.$page.setTitleBar({ text: this.title })
+      console.info(this.articleid)
+      fetch.fetch({
+        url: `https://cnodejs.org/api/v1/topic/${this.articleid}`,
+        success: (data) => {
+
+          if (data.code == '200') {
+            let response = JSON.parse(data.data)
+            console.log(response)
+            this.content = response.data.content
+            this.create_at = (new Date(response.data.create_at)).toLocaleDateString();
+            this.avatar_url = response.data.author.avatar_url
+            this.loginname = response.data.author.loginname
+          }
+        },
+        fail: function (data, code) {
+          console.info('fail');
+        },
+        complete: function () {
+          console.info('complete')
+        }
+      })
+    },
+    onMenuPress() {
+      this.$app.$def.showMenu()
+    }
+  }
+</script>

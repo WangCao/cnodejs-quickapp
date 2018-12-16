@@ -11,7 +11,7 @@
 					<!-- 页面文章列表 -->
 					<list class="main-page" onscrollbottom="loadMoreData">
 						<block for="articleList">
-							<list-item type="article" class="article-item" onclick="openAricle">
+							<list-item type="article" class="article-item" onclick="openAricle($item.id,$item.title)">
 								<image class="avatar-icon" src="{{$item.author.avatar_url}}" onclick="clickCollect($item)"></image>
 								<text class="articie-title">{{$item.title}}</text>
 							</list-item>
@@ -85,7 +85,8 @@
 	.tab-btn text {
 		color: #fff;
 	}
-	.active text{
+
+	.active text {
 		color: #80bd01
 	}
 
@@ -133,6 +134,7 @@
 <script>
 	import fetch from '@system.fetch'
 	import vibrator from '@system.vibrator'
+	import router from '@system.router'
 
 	export default {
 		private: {
@@ -194,8 +196,11 @@
 			})
 		},
 		// 进入文章详情
-		openAricle() {
-			console.info(`进入文章详情`)
+		openAricle(id,title) {
+			router.push({
+				uri: '/Detail',
+				params: {articleid: id,title: title}
+			})
 		},
 		// 加载更多页面
 		loadMoreData() {
