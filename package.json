@@ -2,7 +2,7 @@
   "name": "cnodejs-quickapp",
   "version": "1.0.0",
   "subversion": {
-    "toolkit": "0.0.38"
+    "toolkit": "0.1.0"
   },
   "description": "",
   "scripts": {
