@@ -1,0 +1,172 @@
+<template>
+  <div class="mbox">
+    <div class="main" id="main" onclick="clickhandle">
+      <text>{{nowName}}</text>
+    </div>
+    <div for="tab_list" class="box-item" id="box-item-{{$idx}}">
+      <text>{{$item.name}}</text>
+    </div>
+  </div>  
+
+</template>
+
+<style lang="less">
+
+@basel: 80px;
+@position-right: 10px;
+@position-bottom: 200px;
+@base-fontsize: 24px;
+@base-transform: 120px;
+
+.mbox {
+  position: fixed;
+  width: @basel+20px;
+  height: @basel+20px;
+  right: @position-right;
+  bottom: @position-bottom;
+  z-index: 1000;
+  text {
+    font-size: @base-fontsize;
+  }
+}
+.box-item {
+  position: fixed;
+  width: @basel;
+  height: @basel;
+  right: @position-right;
+  bottom: @position-bottom;
+  z-index: 900;
+  opacity: 0;
+  background-color: #fff;
+  border: 1px solid #666;
+  border-radius: @basel/2;
+}
+.main {
+  width: @basel;
+  height: @basel;
+  justify-content: center;
+  border-radius: @basel/2;
+  background-color: #fff;
+  border: 1px solid #666;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.animation-main {
+  animation-name: mainAnimation;
+  animation-duration: 800ms;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes mainAnimation {
+  0% {
+    transform: scale(1,1);
+  }
+  20% {
+    transform: scale(1.2,1.2);
+  }
+  40% {
+    transform: scale(0.8,0.8);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+</style>
+
+<script>
+let $animation_main = null;
+let $animation_item_0 = null;
+let $animation_item_1 = null;
+let $animation_item_2 = null;
+let $animation_item_3 = null;
+let $animation_item_4 = null;
+let $animation_item_5 = null;
+export default {
+  data: {
+    tab_list: [
+      {
+        name: '全部',
+        type: 'qb'
+      },
+      {
+        name: '精华',
+        type: 'jh'
+      },
+      {
+        name: '分享',
+        type: 'fx'
+      },
+      {
+        name: '问答',
+        type: 'wd'
+      },
+      {
+        name: '招聘',
+        type: 'zp'
+      },
+      {
+        name: '测试',
+        type: 'cs'
+      },
+    ],
+    nowIndex: 0,
+    nowName: '',
+    mainClass: '',
+    isShow: false
+  },
+  onReady () {
+    this.setName()
+  },
+  setName () {
+    this.nowName = this.tab_list[this.nowIndex].name
+  },
+  clickhandle () {
+    this.runMainAnimation();
+    this.tab_list.forEach((item,index) => {
+      this.runAnimation(index)
+    });
+  },
+  runMainAnimation () {
+    console.log("hahahha")
+    let keyframs = [
+      {
+        transform: {
+          scale: 1
+        },
+        time: 0
+      },
+      {
+        transform: {
+          scale: 1.2
+        },
+        time: 20
+      },
+      {
+        transform: {
+          scale: 0.8
+        },
+        time:40
+      },
+      {
+        transform: {
+          scale: 1
+        },
+        time: 100
+      }
+    ]
+    let options = {
+      duration: 800,
+      easing: 'linear',
+      delay: 0,
+      fill: 'none'
+    }
+    let element = this.$element('main')
+    $animation_main = element.animate(keyframs,options)
+    $animation_main.play()
+  },
+  runAnimation(index) {
+    
+  }
+}
+</script>

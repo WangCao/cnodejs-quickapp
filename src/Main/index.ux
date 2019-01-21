@@ -1,9 +1,7 @@
-<!-- <import name="my-footer" src="../components/Footer"></import> -->
+<import name="Mbox" src="../components/Mbox/index"></import>
 
 <template>
 	<!-- 刷新组件 -->
-
-	<!-- <my-footer now=0></my-footer> -->
 	<tabs index="{{now}}" onchange="changeTab">
 		<tab-content class="content-container">
 			<div>
@@ -18,6 +16,7 @@
 						</block>
 					</list>
 				</refresh>
+				<Mbox></Mbox>
 			</div>
 			<div>
 				<text>这是第二页</text>
@@ -25,10 +24,6 @@
 		</tab-content>
 
 		<tab-bar class="footer-container">
-			<!-- <div for="{{btnlist}}" onclick="routerpush($item.to, $idx)" class="btn {{now == $idx ? 'active' : ''}}">
-					<image src="/images/{{now==$idx? $item.png+'_1':$item.png}}.png" />
-					<text>{{$item.text}}</text>
-				  </div> -->
 			<div class="tab-btn">
 				<image src="/images/list{{now==0?'_1':''}}.png" />
 				<text style="color: {{now==0?'#80bd01':'#fff'}}">全部</text>
@@ -196,10 +191,10 @@
 			})
 		},
 		// 进入文章详情
-		openAricle(id,title) {
+		openAricle(id, title) {
 			router.push({
 				uri: '/Detail',
-				params: {articleid: id,title: title}
+				params: { articleid: id, title: title }
 			})
 		},
 		// 加载更多页面
