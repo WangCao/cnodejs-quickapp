@@ -125,7 +125,7 @@ export default {
   },
   clickhandle () {
     clearTimeout(time);
-    this.mainClass = ''
+    this.mainClass = '';
     time = setTimeout(() => {
       this.mainClass = 'animation-main'
       this.runAnimation();
