@@ -273,7 +273,9 @@ module.exports = {
     "height": "100px",
     "right": "10px",
     "bottom": "200px",
-    "zIndex": 1000
+    "zIndex": 1000,
+    "justifyContent": "center",
+    "alignItems": "center"
   },
   ".mbox text": {
     "fontSize": "24px",
@@ -300,10 +302,9 @@ module.exports = {
     "position": "fixed",
     "width": "80px",
     "height": "80px",
-    "right": "10px",
-    "bottom": "200px",
+    "right": "20px",
+    "bottom": "210px",
     "zIndex": 900,
-    "opacity": 0,
     "backgroundColor": "#ffffff",
     "borderTopWidth": "1px",
     "borderRightWidth": "1px",
@@ -314,26 +315,39 @@ module.exports = {
     "borderRightColor": "#666666",
     "borderBottomColor": "#666666",
     "borderLeftColor": "#666666",
-    "borderRadius": "40px"
+    "borderRadius": "40px",
+    "justifyContent": "center",
+    "marginLeft": "10px",
+    "marginTop": "10px"
   },
   ".main": {
     "width": "80px",
     "height": "80px",
     "justifyContent": "center",
     "borderRadius": "40px",
-    "backgroundColor": "#ffffff",
-    "borderTopWidth": "1px",
-    "borderRightWidth": "1px",
-    "borderBottomWidth": "1px",
-    "borderLeftWidth": "1px",
-    "borderStyle": "solid",
-    "borderTopColor": "#666666",
-    "borderRightColor": "#666666",
-    "borderBottomColor": "#666666",
-    "borderLeftColor": "#666666",
-    "textAlign": "center",
-    "marginLeft": "10px",
-    "marginTop": "10px"
+    "backgroundColor": "#444444",
+    "textAlign": "center"
+  },
+  ".main text": {
+    "color": "#80bd01",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "main"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "text"
+        }
+      ]
+    }
   },
   ".animation-main": {
     "animationName": "mainAnimation",
@@ -346,11 +360,11 @@ module.exports = {
         "time": 0
       },
       {
-        "transform": "{\"scaleX\":1.2,\"scaleY\":1.2}",
+        "transform": "{\"scaleX\":0.8,\"scaleY\":0.8}",
         "time": 20
       },
       {
-        "transform": "{\"scaleX\":0.8,\"scaleY\":0.8}",
+        "transform": "{\"scaleX\":1.2,\"scaleY\":1.2}",
         "time": 40
       },
       {
@@ -556,9 +570,7 @@ module.exports = {
       "attr": {
         "id": "main"
       },
-      "classList": [
-        "main"
-      ],
+      "classList": function () {return ['main', this.mainClass]},
       "id": "main",
       "events": {
         "click": "clickhandle"
@@ -575,13 +587,13 @@ module.exports = {
     {
       "type": "div",
       "attr": {
-        "id": function () {return '' + 'box-item-' + (this.$idx)}
+        "id": function () {return '' + 'box-item-' + (this.$idx+1)}
       },
       "repeat": function () {return this.tab_list},
       "classList": [
         "box-item"
       ],
-      "id": function () {return '' + 'box-item-' + (this.$idx)},
+      "id": function () {return '' + 'box-item-' + (this.$idx+1)},
       "children": [
         {
           "type": "text",
@@ -745,13 +757,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var $animation_main = null;
-var $animation_item_0 = null;
-var $animation_item_1 = null;
-var $animation_item_2 = null;
-var $animation_item_3 = null;
-var $animation_item_4 = null;
-var $animation_item_5 = null;
+var time;
+var animation_arr = [];
 var _default = {
   data: {
     tab_list: [{
@@ -773,7 +780,7 @@ var _default = {
       name: '测试',
       type: 'cs'
     }],
-    nowIndex: 0,
+    nowIndex: 2,
     nowName: '',
     mainClass: '',
     isShow: false
@@ -787,45 +794,45 @@ var _default = {
   clickhandle: function clickhandle() {
     var _this = this;
 
-    this.runMainAnimation();
+    clearTimeout(time);
+    this.mainClass = '';
+    time = setTimeout(function () {
+      _this.mainClass = 'animation-main';
+
+      _this.runAnimation();
+    }, 0);
+  },
+  runAnimation: function runAnimation() {
+    var _this2 = this;
+
     this.tab_list.forEach(function (item, index) {
-      _this.runAnimation(index);
+      var keyframes = [{
+        transform: {
+          translateY: 0,
+          opacity: 0
+        },
+        time: 0
+      }, {
+        transform: {
+          translateY: -140 * (index + 1),
+          opacity: 1
+        },
+        time: 100
+      }];
+      var options = {
+        duration: 200,
+        easing: 'linear',
+        delay: 160,
+        fill: 'forwards'
+      };
+      console.log("运动起来");
+
+      var node = _this2.$element("box-item-".concat(index + 1));
+
+      animation_arr[index] = node.animate(keyframes, options);
+      animation_arr[index].play();
     });
-  },
-  runMainAnimation: function runMainAnimation() {
-    console.log("hahahha");
-    var keyframs = [{
-      transform: {
-        scale: 1
-      },
-      time: 0
-    }, {
-      transform: {
-        scale: 1.2
-      },
-      time: 20
-    }, {
-      transform: {
-        scale: 0.8
-      },
-      time: 40
-    }, {
-      transform: {
-        scale: 1
-      },
-      time: 100
-    }];
-    var options = {
-      duration: 800,
-      easing: 'linear',
-      delay: 0,
-      fill: 'none'
-    };
-    var element = this.$element('main');
-    $animation_main = element.animate(keyframs, options);
-    $animation_main.play();
-  },
-  runAnimation: function runAnimation(index) {}
+  }
 };
 exports.default = _default;}
 

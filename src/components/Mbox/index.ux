@@ -1,9 +1,9 @@
 <template>
   <div class="mbox">
-    <div class="main" id="main" onclick="clickhandle">
+    <div class="main {{mainClass}}" id="main" onclick="clickhandle">
       <text>{{nowName}}</text>
     </div>
-    <div for="tab_list" class="box-item" id="box-item-{{$idx}}">
+    <div for="tab_list" class="box-item" id="box-item-{{$idx+1}}">
       <text>{{$item.name}}</text>
     </div>
   </div>  
@@ -25,6 +25,9 @@
   right: @position-right;
   bottom: @position-bottom;
   z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  
   text {
     font-size: @base-fontsize;
   }
@@ -33,24 +36,27 @@
   position: fixed;
   width: @basel;
   height: @basel;
-  right: @position-right;
-  bottom: @position-bottom;
+  right: @position-right+10px;
+  bottom: @position-bottom+10px;
   z-index: 900;
-  opacity: 0;
+  /* opacity: 0; */
   background-color: #fff;
   border: 1px solid #666;
   border-radius: @basel/2;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 .main {
   width: @basel;
   height: @basel;
   justify-content: center;
   border-radius: @basel/2;
-  background-color: #fff;
-  border: 1px solid #666;
+  background-color: #444;
   text-align: center;
-  margin-left: 10px;
-  margin-top: 10px;
+  text {
+    color: #80bd01;
+  }
 }
 .animation-main {
   animation-name: mainAnimation;
@@ -62,10 +68,10 @@
     transform: scale(1,1);
   }
   20% {
-    transform: scale(1.2,1.2);
+    transform: scale(0.8,0.8);
   }
   40% {
-    transform: scale(0.8,0.8);
+    transform: scale(1.2,1.2);
   }
   100% {
     transform: scale(1,1);
@@ -75,13 +81,9 @@
 </style>
 
 <script>
-let $animation_main = null;
-let $animation_item_0 = null;
-let $animation_item_1 = null;
-let $animation_item_2 = null;
-let $animation_item_3 = null;
-let $animation_item_4 = null;
-let $animation_item_5 = null;
+let time;
+let animation_arr = []
+
 export default {
   data: {
     tab_list: [
@@ -110,7 +112,7 @@ export default {
         type: 'cs'
       },
     ],
-    nowIndex: 0,
+    nowIndex: 2,
     nowName: '',
     mainClass: '',
     isShow: false
@@ -122,51 +124,42 @@ export default {
     this.nowName = this.tab_list[this.nowIndex].name
   },
   clickhandle () {
-    this.runMainAnimation();
+    clearTimeout(time);
+    this.mainClass = ''
+    time = setTimeout(() => {
+      this.mainClass = 'animation-main'
+      this.runAnimation();
+    }, 0);
+  },
+  runAnimation() {
     this.tab_list.forEach((item,index) => {
-      this.runAnimation(index)
-    });
-  },
-  runMainAnimation () {
-    console.log("hahahha")
-    let keyframs = [
-      {
-        transform: {
-          scale: 1
+      let keyframes = [
+        {
+          transform: {
+            translateY: 0,
+            opacity: 0
+          },
+          time: 0
         },
-        time: 0
-      },
-      {
-        transform: {
-          scale: 1.2
-        },
-        time: 20
-      },
-      {
-        transform: {
-          scale: 0.8
-        },
-        time:40
-      },
-      {
-        transform: {
-          scale: 1
-        },
-        time: 100
+        {
+          transform: {
+            translateY: -140*(index+1), 
+            opacity: 1
+          },
+          time: 100
+        }
+      ];
+      let options = {
+        duration: 200,
+        easing: 'linear',
+        delay: 160,
+        fill: 'forwards'
       }
-    ]
-    let options = {
-      duration: 800,
-      easing: 'linear',
-      delay: 0,
-      fill: 'none'
-    }
-    let element = this.$element('main')
-    $animation_main = element.animate(keyframs,options)
-    $animation_main.play()
-  },
-  runAnimation(index) {
-    
+      console.log("运动起来")
+      let node = this.$element(`box-item-${index +1}`)
+      animation_arr[index] =  node.animate(keyframes,options);
+      animation_arr[index].play()
+    });
   }
 }
 </script>
