@@ -130,6 +130,7 @@
 	import fetch from '@system.fetch'
 	import vibrator from '@system.vibrator'
 	import router from '@system.router'
+	import {fetch} from '../tools' 
 
 	export default {
 		private: {
