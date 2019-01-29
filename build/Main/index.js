@@ -783,7 +783,8 @@ var _default = {
     nowIndex: 2,
     nowName: '',
     mainClass: '',
-    isShow: false
+    isShow: false,
+    isOpen: false
   },
   onReady: function onReady() {
     this.setName();
@@ -799,10 +800,14 @@ var _default = {
     time = setTimeout(function () {
       _this.mainClass = 'animation-main';
 
-      _this.runAnimation();
+      if (_this.isOpen) {
+        _this.runCloseAnimation();
+      } else {
+        _this.runOpenAnimation();
+      }
     }, 0);
   },
-  runAnimation: function runAnimation() {
+  runOpenAnimation: function runOpenAnimation() {
     var _this2 = this;
 
     this.tab_list.forEach(function (item, index) {
@@ -830,8 +835,24 @@ var _default = {
       var node = _this2.$element("box-item-".concat(index + 1));
 
       animation_arr[index] = node.animate(keyframes, options);
+      console.log(node.animate(keyframes, options));
       animation_arr[index].play();
     });
+    this.isOpen = true;
+  },
+  runCloseAnimation: function runCloseAnimation() {
+    try {
+      animation_arr.forEach(function (item, index) {
+        if (!item.finished) {
+          throw '动画还未结束';
+        }
+
+        item.reverse();
+      });
+      this.isOpen = false;
+    } catch (err) {
+      console.info("".concat(err));
+    }
   }
 };
 exports.default = _default;}

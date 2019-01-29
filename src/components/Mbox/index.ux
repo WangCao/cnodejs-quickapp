@@ -6,160 +6,185 @@
     <div for="tab_list" class="box-item" id="box-item-{{$idx+1}}">
       <text>{{$item.name}}</text>
     </div>
-  </div>  
+  </div>
 
 </template>
 
 <style lang="less">
+  @basel: 80px;
+  @position-right: 10px;
+  @position-bottom: 200px;
+  @base-fontsize: 24px;
+  @base-transform: 120px;
 
-@basel: 80px;
-@position-right: 10px;
-@position-bottom: 200px;
-@base-fontsize: 24px;
-@base-transform: 120px;
+  .mbox {
+    position: fixed;
+    width: @basel+20px;
+    height: @basel+20px;
+    right: @position-right;
+    bottom: @position-bottom;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 
-.mbox {
-  position: fixed;
-  width: @basel+20px;
-  height: @basel+20px;
-  right: @position-right;
-  bottom: @position-bottom;
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  
-  text {
-    font-size: @base-fontsize;
+    text {
+      font-size: @base-fontsize;
+    }
   }
-}
-.box-item {
-  position: fixed;
-  width: @basel;
-  height: @basel;
-  right: @position-right+10px;
-  bottom: @position-bottom+10px;
-  z-index: 900;
-  /* opacity: 0; */
-  background-color: #fff;
-  border: 1px solid #666;
-  border-radius: @basel/2;
-  justify-content: center;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-.main {
-  width: @basel;
-  height: @basel;
-  justify-content: center;
-  border-radius: @basel/2;
-  background-color: #444;
-  text-align: center;
-  text {
-    color: #80bd01;
-  }
-}
-.animation-main {
-  animation-name: mainAnimation;
-  animation-duration: 800ms;
-  /* animation-iteration-count: infinite; */
-}
-@keyframes mainAnimation {
-  0% {
-    transform: scale(1,1);
-  }
-  20% {
-    transform: scale(0.8,0.8);
-  }
-  40% {
-    transform: scale(1.2,1.2);
-  }
-  100% {
-    transform: scale(1,1);
-  }
-}
 
+  .box-item {
+    position: fixed;
+    width: @basel;
+    height: @basel;
+    right: @position-right+10px;
+    bottom: @position-bottom+10px;
+    z-index: 900;
+    background-color: #fff;
+    border: 1px solid #666;
+    border-radius: @basel/2;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .main {
+    width: @basel;
+    height: @basel;
+    justify-content: center;
+    border-radius: @basel/2;
+    background-color: #444;
+    text-align: center;
+
+    text {
+      color: #80bd01;
+    }
+  }
+
+  .animation-main {
+    animation-name: mainAnimation;
+    animation-duration: 800ms;
+    /* animation-iteration-count: infinite; */
+  }
+
+  @keyframes mainAnimation {
+    0% {
+      transform: scale(1, 1);
+    }
+
+    20% {
+      transform: scale(0.8, 0.8);
+    }
+
+    40% {
+      transform: scale(1.2, 1.2);
+    }
+
+    100% {
+      transform: scale(1, 1);
+    }
+  }
 </style>
 
 <script>
-let time;
-let animation_arr = []
+  let time;
+  let animation_arr = []
 
-export default {
-  data: {
-    tab_list: [
-      {
-        name: '全部',
-        type: 'qb'
-      },
-      {
-        name: '精华',
-        type: 'jh'
-      },
-      {
-        name: '分享',
-        type: 'fx'
-      },
-      {
-        name: '问答',
-        type: 'wd'
-      },
-      {
-        name: '招聘',
-        type: 'zp'
-      },
-      {
-        name: '测试',
-        type: 'cs'
-      },
-    ],
-    nowIndex: 2,
-    nowName: '',
-    mainClass: '',
-    isShow: false
-  },
-  onReady () {
-    this.setName()
-  },
-  setName () {
-    this.nowName = this.tab_list[this.nowIndex].name
-  },
-  clickhandle () {
-    clearTimeout(time);
-    this.mainClass = '';
-    time = setTimeout(() => {
-      this.mainClass = 'animation-main'
-      this.runAnimation();
-    }, 0);
-  },
-  runAnimation() {
-    this.tab_list.forEach((item,index) => {
-      let keyframes = [
+  export default {
+    data: {
+      tab_list: [
         {
-          transform: {
-            translateY: 0,
-            opacity: 0
-          },
-          time: 0
+          name: '全部',
+          type: 'qb'
         },
         {
-          transform: {
-            translateY: -140*(index+1), 
-            opacity: 1
-          },
-          time: 100
+          name: '精华',
+          type: 'jh'
+        },
+        {
+          name: '分享',
+          type: 'fx'
+        },
+        {
+          name: '问答',
+          type: 'wd'
+        },
+        {
+          name: '招聘',
+          type: 'zp'
+        },
+        {
+          name: '测试',
+          type: 'cs'
+        },
+      ],
+      nowIndex: 2,
+      nowName: '',
+      mainClass: '',
+      isShow: false,
+      isOpen: false, // 是否打开
+    },
+    onReady() {
+      this.setName()
+    },
+    setName() {
+      this.nowName = this.tab_list[this.nowIndex].name
+    },
+    clickhandle() {
+      clearTimeout(time);
+      this.mainClass = '';
+      time = setTimeout(() => {
+        this.mainClass = 'animation-main'
+        if (this.isOpen) {
+          this.runCloseAnimation();
+        } else {
+          this.runOpenAnimation();
         }
-      ];
-      let options = {
-        duration: 200,
-        easing: 'linear',
-        delay: 160,
-        fill: 'forwards'
+      }, 0);
+    },
+    runOpenAnimation() {
+      this.tab_list.forEach((item, index) => {
+        let keyframes = [
+          {
+            transform: {
+              translateY: 0,
+              opacity: 0
+            },
+            time: 0
+          },
+          {
+            transform: {
+              translateY: -140 * (index + 1),
+              opacity: 1
+            },
+            time: 100
+          }
+        ];
+        let options = {
+          duration: 200,
+          easing: 'linear',
+          delay: 160,
+          fill: 'forwards'
+        }
+        console.log("运动起来")
+        let node = this.$element(`box-item-${index + 1}`)
+        animation_arr[index] = node.animate(keyframes, options);
+        console.log(node.animate(keyframes, options))
+        animation_arr[index].play()
+      });
+      this.isOpen = true;
+    },
+    runCloseAnimation() {
+      try {
+        animation_arr.forEach((item, index) => {
+          if (!item.finished) {
+            throw '动画还未结束'
+          }
+          item.reverse();
+        })
+        this.isOpen = false;
+      } catch (err) {
+        console.info(`${err}`)
       }
-      console.log("运动起来")
-      let node = this.$element(`box-item-${index +1}`)
-      animation_arr[index] =  node.animate(keyframes,options);
-      animation_arr[index].play()
-    });
+    }
   }
-}
 </script>
