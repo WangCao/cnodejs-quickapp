@@ -16,7 +16,7 @@
 						</block>
 					</list>
 				</refresh>
-				<Mbox></Mbox>
+				<Mbox onchange-type="changeType" isshow = "{{now==0?true:false}}"></Mbox>
 			</div>
 			<div>
 				<text>这是第二页</text>
@@ -127,10 +127,10 @@
 	}
 </style>
 <script>
-	import fetch from '@system.fetch'
+	// import fetch from '@system.fetch'
 	import vibrator from '@system.vibrator'
 	import router from '@system.router'
-	import {fetch} from '../tools' 
+	import { request } from '../tools'
 
 	export default {
 		private: {
@@ -140,9 +140,11 @@
 			limit: 20, // 分页限制
 			hasMoreData: true, // 分页是否结束
 			now: 0,
+			tab: 'all' // 当前的主题,还有 good share ask job dev
 		},
 		onInit() {
 			this.refresh()
+			this.$on('changeType',this.changeType)
 			this.$page.setTitleBar({ text: '全部' })
 		},
 		changeTab(nowIndex) {
@@ -156,38 +158,23 @@
 		},
 		// 获取文章列表
 		getArticle() {
-			fetch.fetch({
-				url: 'https://cnodejs.org/api/v1/topics',
-				data: {
-					page: this.page,
-					limit: this.limit,
-					mdrender: false
-				},
-				success: (data) => {
-					console.info(data)
-					if (data.code == '200' && data.data) {
-						data = JSON.parse(data.data)
-						if (this.page > 0) {
-							this.articleList = this.articleList.concat(data.data)
-							vibrator.vibrate({
-								mode: 'short'
-							})
-						} else {
-							console.log("运行到这里")
-							this.isRefreshing = false
-							this.articleList = data.data
-							console.log(this.isRefreshing)
-						}
-						console.log(this.articleList)
-					} else {
-						console.info(`接口错误`)
-					}
-				},
-				fail: function (data, code) {
-					console.info('fail');
-				},
-				complete: function () {
-					console.info('complete')
+			request('https://cnodejs.org/api/v1/topics', {
+				page: this.page,
+				limit: this.limit,
+				mdrender: false,
+				tab: this.tab
+			}).then((data) => {
+				data = JSON.parse(data)
+				if (this.page > 0) {
+					this.articleList = this.articleList.concat(data.data)
+					vibrator.vibrate({
+						mode: 'short'
+					})
+				} else {
+					console.log("运行到这里")
+					this.isRefreshing = false
+					this.articleList = data.data
+					console.log(this.isRefreshing)
 				}
 			})
 		},
@@ -200,11 +187,18 @@
 		},
 		// 加载更多页面
 		loadMoreData() {
-
 			if (this.hasMoreData) {
 				this.page++
 				this.getArticle();
 			}
+		},
+
+		// 改变分类
+		changeType(tab) {
+			this.$page.setTitleBar({ text: tab.detail.name })
+			this.tab = tab.detail.type
+			this.page = 0;
+			this.getArticle();
 		}
 	}
 </script>

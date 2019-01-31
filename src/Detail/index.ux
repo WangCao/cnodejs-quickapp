@@ -63,6 +63,7 @@
 
 <script>
   import fetch from '@system.fetch'
+  import { request } from '../tools'
   export default {
     private: {
       content: '',
@@ -79,8 +80,7 @@
       console.info(this.articleid)
       fetch.fetch({
         url: `https://cnodejs.org/api/v1/topic/${this.articleid}`,
-        success: (data) => {
-
+        success: (data) => {        
           if (data.code == '200') {
             let response = JSON.parse(data.data)
             console.log(response)

@@ -1,9 +1,9 @@
 <template>
-  <div class="mbox">
+  <div class="mbox" id="mbox">
     <div class="main {{mainClass}}" id="main" onclick="clickhandle">
       <text>{{nowName}}</text>
     </div>
-    <div for="tab_list" class="box-item" id="box-item-{{$idx+1}}">
+    <div for="tab_list" class="box-item" id="box-item-{{$idx+1}}" onclick="changeTab($item)">
       <text>{{$item.name}}</text>
     </div>
   </div>
@@ -36,6 +36,7 @@
     position: fixed;
     width: @basel;
     height: @basel;
+    opacity: 0;
     right: @position-right+10px;
     bottom: @position-bottom+10px;
     z-index: 900;
@@ -88,48 +89,78 @@
 <script>
   let time;
   let animation_arr = []
+  let show_or_hide_keyframs = [  // 显示,隐藏keyframes
+    {
+      transform: {
+        translateX: 0,
+      },
+      time: 0
+    },
+    {
+      transform: {
+        translateX: 200,
+        opacity: 1
+      },
+      time: 100
+    }
+  ]
+  let show_or_hide_options = {  // 影藏动画 配置
+    duration: 200,
+    easing: 'linear',
+    fill: 'forwards'
+  }
+  let show_or_hide_animate
 
   export default {
+    props: {
+      isshow: {
+        default: true,
+      }
+    },
     data: {
       tab_list: [
         {
           name: '全部',
-          type: 'qb'
+          type: 'all'
         },
         {
           name: '精华',
-          type: 'jh'
+          type: 'good'
         },
         {
           name: '分享',
-          type: 'fx'
+          type: 'share'
         },
         {
           name: '问答',
-          type: 'wd'
+          type: 'ask'
         },
         {
           name: '招聘',
-          type: 'zp'
+          type: 'job'
         },
         {
           name: '测试',
-          type: 'cs'
+          type: 'dev'
         },
       ],
-      nowIndex: 2,
+      nowIndex: 0,
       nowName: '',
       mainClass: '',
-      isShow: false,
       isOpen: false, // 是否打开
+      isReady: false,  // 模板是否编译完成
     },
     onReady() {
+      this.isReady = true // 监听dom是否准备完成
+      console.log(this.isshow)
+      this.$watch('isshow','runHideOrShowAnimation') // 监听按钮是否显示隐藏
       this.setName()
     },
     setName() {
       this.nowName = this.tab_list[this.nowIndex].name
     },
     clickhandle() {
+      if (!this.isReady) return;
       clearTimeout(time);
       this.mainClass = '';
       time = setTimeout(() => {
@@ -146,16 +177,16 @@
         let keyframes = [
           {
             transform: {
-              translateY: 0,
-              opacity: 0
+              translateY: 0
             },
+            opacity: 0,
             time: 0
           },
           {
             transform: {
-              translateY: -140 * (index + 1),
-              opacity: 1
+              translateY: -140 * (index + 1)
             },
+            opacity: 1,
             time: 100
           }
         ];
@@ -165,10 +196,8 @@
           delay: 160,
           fill: 'forwards'
         }
-        console.log("运动起来")
         let node = this.$element(`box-item-${index + 1}`)
         animation_arr[index] = node.animate(keyframes, options);
-        console.log(node.animate(keyframes, options))
         animation_arr[index].play()
       });
       this.isOpen = true;
@@ -184,6 +213,25 @@
         this.isOpen = false;
       } catch (err) {
         console.info(`${err}`)
+      }
+    },
+    changeTab(tab) {
+      this.$emit('changeType', tab)
+      this.nowName = tab.name
+      this.runCloseAnimation()
+    },
+    // 组件展示隐藏,依赖于 isshow 变量
+    runHideOrShowAnimation() {
+      if (!this.isReady) return;
+      if (!show_or_hide_animate) {
+        show_or_hide_animate = this.$element(`mbox`).animate(show_or_hide_keyframs, show_or_hide_options)
+      }
+      if (this.isshow) {
+        // show
+        show_or_hide_animate.reverse()
+      } else {
+        // hide
+        show_or_hide_animate.play()
       }
     }
   }

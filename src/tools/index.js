@@ -5,16 +5,20 @@ let default_options = {
 }
 
 function assignOptions (options) {
-  return Object.assign(options,default_options)
+  if (!options) {
+    return Object.assign(default_options,options)
+  }else {
+    return default_options 
+  }
 }
-const fetch = function (url, data = {}, method = "GET", options = assignOptions(options)) {
+const request = function (url, data = {}, method = "GET", options = assignOptions(options)) {
   return new Promise(resolve => {
     fetch.fetch({
       url: url,
       method: method,
       data: data,
       success: function (data) {
-        if (data.code == '200' && data.data) {
+        if (data.code == '200' && data.data) { 
           resolve(data.data)
         }else {
           throw Error(`接口返回错误`)
@@ -27,5 +31,5 @@ const fetch = function (url, data = {}, method = "GET", options = assignOptions(
   })
 }
 export {
-  fetch
+  request
 }

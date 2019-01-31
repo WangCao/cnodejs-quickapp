@@ -302,6 +302,7 @@ module.exports = {
     "position": "fixed",
     "width": "80px",
     "height": "80px",
+    "opacity": 0,
     "right": "20px",
     "bottom": "210px",
     "zIndex": 900,
@@ -471,7 +472,12 @@ module.exports = {
             },
             {
               "type": "mbox",
-              "attr": {}
+              "attr": {
+                "isshow": function () {return this.now==0?true:false}
+              },
+              "events": {
+                "change-type": "changeType"
+              }
             }
           ]
         },
@@ -560,10 +566,13 @@ module.exports = {
 
 module.exports = {
   "type": "div",
-  "attr": {},
+  "attr": {
+    "id": "mbox"
+  },
   "classList": [
     "mbox"
   ],
+  "id": "mbox",
   "children": [
     {
       "type": "div",
@@ -594,6 +603,9 @@ module.exports = {
         "box-item"
       ],
       "id": function () {return '' + 'box-item-' + (this.$idx+1)},
+      "events": {
+        "click": function (evt) {this.changeTab(this.$item,evt)}
+      },
       "children": [
         {
           "type": "text",
@@ -613,7 +625,7 @@ module.exports = {
   !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function(module, exports, $app_require$){"use strict";
 
@@ -622,11 +634,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _system = _interopRequireDefault($app_require$("@app-module/system.fetch"));
+var _system = _interopRequireDefault($app_require$("@app-module/system.vibrator"));
 
-var _system2 = _interopRequireDefault($app_require$("@app-module/system.vibrator"));
+var _system2 = _interopRequireDefault($app_require$("@app-module/system.router"));
 
-var _system3 = _interopRequireDefault($app_require$("@app-module/system.router"));
+var _tools = __webpack_require__(/*! ../tools */ "./src/tools/index.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -639,10 +651,12 @@ var _default = {
     page: 0,
     limit: 20,
     hasMoreData: true,
-    now: 0
+    now: 0,
+    tab: 'all'
   },
   onInit: function onInit() {
     this.refresh();
+    this.$on('changeType', this.changeType);
     this.$page.setTitleBar({
       text: '全部'
     });
@@ -659,47 +673,30 @@ var _default = {
   getArticle: function getArticle() {
     var _this = this;
 
-    _system.default.fetch({
-      url: 'https://cnodejs.org/api/v1/topics',
-      data: {
-        page: this.page,
-        limit: this.limit,
-        mdrender: false
-      },
-      success: function success(data) {
-        console.info(data);
+    (0, _tools.request)('https://cnodejs.org/api/v1/topics', {
+      page: this.page,
+      limit: this.limit,
+      mdrender: false,
+      tab: this.tab
+    }).then(function (data) {
+      data = JSON.parse(data);
 
-        if (data.code == '200' && data.data) {
-          data = JSON.parse(data.data);
+      if (_this.page > 0) {
+        _this.articleList = _this.articleList.concat(data.data);
 
-          if (_this.page > 0) {
-            _this.articleList = _this.articleList.concat(data.data);
-
-            _system2.default.vibrate({
-              mode: 'short'
-            });
-          } else {
-            console.log("运行到这里");
-            _this.isRefreshing = false;
-            _this.articleList = data.data;
-            console.log(_this.isRefreshing);
-          }
-
-          console.log(_this.articleList);
-        } else {
-          console.info("\u63A5\u53E3\u9519\u8BEF");
-        }
-      },
-      fail: function fail(data, code) {
-        console.info('fail');
-      },
-      complete: function complete() {
-        console.info('complete');
+        _system.default.vibrate({
+          mode: 'short'
+        });
+      } else {
+        console.log("运行到这里");
+        _this.isRefreshing = false;
+        _this.articleList = data.data;
+        console.log(_this.isRefreshing);
       }
     });
   },
   openAricle: function openAricle(id, title) {
-    _system3.default.push({
+    _system2.default.push({
       uri: '/Detail',
       params: {
         articleid: id,
@@ -712,6 +709,14 @@ var _default = {
       this.page++;
       this.getArticle();
     }
+  },
+  changeType: function changeType(tab) {
+    this.$page.setTitleBar({
+      text: tab.detail.name
+    });
+    this.tab = tab.detail.type;
+    this.page = 0;
+    this.getArticle();
   }
 };
 exports.default = _default;
@@ -759,34 +764,60 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var time;
 var animation_arr = [];
+var show_or_hide_keyframs = [{
+  transform: {
+    translateX: 0
+  },
+  time: 0
+}, {
+  transform: {
+    translateX: 200,
+    opacity: 1
+  },
+  time: 100
+}];
+var show_or_hide_options = {
+  duration: 200,
+  easing: 'linear',
+  fill: 'forwards'
+};
+var show_or_hide_animate;
 var _default = {
+  props: {
+    isshow: {
+      default: true
+    }
+  },
   data: {
     tab_list: [{
       name: '全部',
-      type: 'qb'
+      type: 'all'
     }, {
       name: '精华',
-      type: 'jh'
+      type: 'good'
     }, {
       name: '分享',
-      type: 'fx'
+      type: 'share'
     }, {
       name: '问答',
-      type: 'wd'
+      type: 'ask'
     }, {
       name: '招聘',
-      type: 'zp'
+      type: 'job'
     }, {
       name: '测试',
-      type: 'cs'
+      type: 'dev'
     }],
-    nowIndex: 2,
+    nowIndex: 0,
     nowName: '',
     mainClass: '',
-    isShow: false,
-    isOpen: false
+    isOpen: false,
+    isReady: false
   },
   onReady: function onReady() {
+    this.isReady = true;
+    console.log(this.isshow);
+    this.$watch('isshow', 'runHideOrShowAnimation');
     this.setName();
   },
   setName: function setName() {
@@ -795,6 +826,7 @@ var _default = {
   clickhandle: function clickhandle() {
     var _this = this;
 
+    if (!this.isReady) return;
     clearTimeout(time);
     this.mainClass = '';
     time = setTimeout(function () {
@@ -813,15 +845,15 @@ var _default = {
     this.tab_list.forEach(function (item, index) {
       var keyframes = [{
         transform: {
-          translateY: 0,
-          opacity: 0
+          translateY: 0
         },
+        opacity: 0,
         time: 0
       }, {
         transform: {
-          translateY: -140 * (index + 1),
-          opacity: 1
+          translateY: -140 * (index + 1)
         },
+        opacity: 1,
         time: 100
       }];
       var options = {
@@ -830,12 +862,10 @@ var _default = {
         delay: 160,
         fill: 'forwards'
       };
-      console.log("运动起来");
 
       var node = _this2.$element("box-item-".concat(index + 1));
 
       animation_arr[index] = node.animate(keyframes, options);
-      console.log(node.animate(keyframes, options));
       animation_arr[index].play();
     });
     this.isOpen = true;
@@ -852,6 +882,24 @@ var _default = {
       this.isOpen = false;
     } catch (err) {
       console.info("".concat(err));
+    }
+  },
+  changeTab: function changeTab(tab) {
+    this.$emit('changeType', tab);
+    this.nowName = tab.name;
+    this.runCloseAnimation();
+  },
+  runHideOrShowAnimation: function runHideOrShowAnimation() {
+    if (!this.isReady) return;
+
+    if (!show_or_hide_animate) {
+      show_or_hide_animate = this.$element("mbox").animate(show_or_hide_keyframs, show_or_hide_options);
+    }
+
+    if (this.isshow) {
+      show_or_hide_animate.reverse();
+    } else {
+      show_or_hide_animate.play();
     }
   }
 };
@@ -905,6 +953,62 @@ $app_define$('@app-component/index', [], function($app_require$, $app_exports$, 
 
 $app_bootstrap$('@app-component/index',{ packagerVersion: '0.0.5'})
 
+
+/***/ }),
+
+/***/ "./src/tools/index.js":
+/*!****************************!*\
+  !*** ./src/tools/index.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.request = void 0;
+
+var fetch = $app_require$('@app-module/system.fetch');
+
+var default_options = {
+  responseType: 'json'
+};
+
+function assignOptions(options) {
+  if (!options) {
+    return Object.assign(default_options, options);
+  } else {
+    return default_options;
+  }
+}
+
+var request = function request(url) {
+  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "GET";
+  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : assignOptions(options);
+  return new Promise(function (resolve) {
+    fetch.fetch({
+      url: url,
+      method: method,
+      data: data,
+      success: function success(data) {
+        if (data.code == '200' && data.data) {
+          resolve(data.data);
+        } else {
+          throw Error("\u63A5\u53E3\u8FD4\u56DE\u9519\u8BEF");
+        }
+      },
+      fail: function fail(data, code) {
+        throw Error("\u63A5\u53E3\u8FD4\u56DE\u9519\u8BEF");
+      }
+    });
+  });
+};
+
+exports.request = request;
 
 /***/ })
 
