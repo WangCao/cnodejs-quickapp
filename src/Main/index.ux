@@ -1,4 +1,5 @@
 <import name="Mbox" src="../components/Mbox/index"></import>
+<import name="My" src="../components/My/index"></import>
 
 <template>
 	<!-- 刷新组件 -->
@@ -18,9 +19,7 @@
 				</refresh>
 				<Mbox onchange-type="changeType" isshow = "{{now==0?true:false}}"></Mbox>
 			</div>
-			<div>
-				<text>这是第二页</text>
-			</div>
+			<My></My>
 		</tab-content>
 
 		<tab-bar class="footer-container">
@@ -36,7 +35,8 @@
 	</tabs>
 
 </template>
-<style>
+<style lang="less">
+	@import '../Common/base.less';
 	tabs {
 		width: 100%;
 		height: 100%;
@@ -82,7 +82,7 @@
 	}
 
 	.active text {
-		color: #80bd01
+		color: @base-active-color;
 	}
 
 	.footer-container image {
@@ -93,11 +93,11 @@
 
 	.page-main {
 		height: 100%;
-		color: #80bd01;
+		color: @base-active-color;
 	}
 
 	refresh {
-		progress-color: #80bd01;
+		progress-color: @base-active-color;
 	}
 
 	.article-item {
@@ -124,6 +124,10 @@
 		margin-left: 20px;
 		lines: 1;
 		text-overflow: ellipsis;
+	}
+	.my-page {
+		width: 100%;
+		height: 100%;
 	}
 </style>
 <script>

@@ -89,10 +89,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./src/Main/index.ux?uxType=page":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./src/Main/index.ux?uxType=page ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/Main/index.ux?uxType=page":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/Main/index.ux?uxType=page ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -254,15 +254,19 @@ module.exports = {
     "marginLeft": "20px",
     "lines": 1,
     "textOverflow": "ellipsis"
+  },
+  ".my-page": {
+    "width": "100%",
+    "height": "100%"
   }
 }
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./src/components/Mbox/index.ux?uxType=comp":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./src/components/Mbox/index.ux?uxType=comp ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/components/Mbox/index.ux?uxType=comp":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/components/Mbox/index.ux?uxType=comp ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -378,10 +382,55 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page&importNames[]=mbox":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page&importNames[]=mbox ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/components/My/index.ux?uxType=comp":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/components/My/index.ux?uxType=comp ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  ".my": {
+    "width": "100%",
+    "height": "100%",
+    "alignItems": "center",
+    "justifyContent": "flex-start",
+    "flexDirection": "column"
+  },
+  ".my .header": {
+    "width": "100%",
+    "height": "200px",
+    "backgroundColor": "#444444",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "my"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "header"
+        }
+      ]
+    }
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page&importNames[]=mbox,importNames[]=my":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page&importNames[]=mbox,importNames[]=my ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -482,16 +531,8 @@ module.exports = {
           ]
         },
         {
-          "type": "div",
-          "attr": {},
-          "children": [
-            {
-              "type": "text",
-              "attr": {
-                "value": "这是第二页"
-              }
-            }
-          ]
+          "type": "my",
+          "attr": {}
         }
       ]
     },
@@ -557,10 +598,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./src/components/Mbox/index.ux?uxType=comp&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./src/components/Mbox/index.ux?uxType=comp& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/components/Mbox/index.ux?uxType=comp&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/components/Mbox/index.ux?uxType=comp& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -620,14 +661,54 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/components/My/index.ux?uxType=comp&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/components/My/index.ux?uxType=comp& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "type": "div",
+  "attr": {},
+  "classList": [
+    "my"
+  ],
+  "children": [
+    {
+      "type": "div",
+      "attr": {},
+      "classList": [
+        "header"
+      ],
+      "children": [
+        {
+          "type": "image",
+          "attr": {
+            "src": "/images/logo.svg"
+          }
+        },
+        {
+          "type": "text",
+          "attr": {
+            "value": "name"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+/***/ }),
+
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/access-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/access-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function(module, exports, $app_require$){"use strict";
+module.exports = function __scriptModule__ (module, exports, $app_require$){"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -749,19 +830,24 @@ if (moduleOwn.data && accessors.some(function (acc) {
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/components/Mbox/index.ux?uxType=comp":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/components/Mbox/index.ux?uxType=comp ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/components/Mbox/index.ux?uxType=comp":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/components/Mbox/index.ux?uxType=comp ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = function(module, exports, $app_require$){"use strict";
+module.exports = function __scriptModule__ (module, exports, $app_require$){"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 var time;
 var animation_arr = [];
 var show_or_hide_keyframs = [{
@@ -889,36 +975,117 @@ var _default = {
     this.nowName = tab.name;
     this.runCloseAnimation();
   },
-  runHideOrShowAnimation: function runHideOrShowAnimation() {
-    if (!this.isReady) return;
+  timeout: function timeout(ms) {
+    return new Promise(function (resolve) {
+      return setTimeout(resolve, ms);
+    });
+  },
+  runHideOrShowAnimation: function () {
+    var _runHideOrShowAnimation = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (this.isReady) {
+                _context.next = 2;
+                break;
+              }
 
-    if (!show_or_hide_animate) {
-      show_or_hide_animate = this.$element("mbox").animate(show_or_hide_keyframs, show_or_hide_options);
+              return _context.abrupt("return");
+
+            case 2:
+              if (!this.isOpen) {
+                _context.next = 6;
+                break;
+              }
+
+              this.runCloseAnimation();
+              _context.next = 6;
+              return this.timeout(200);
+
+            case 6:
+              if (!show_or_hide_animate) {
+                show_or_hide_animate = this.$element("mbox").animate(show_or_hide_keyframs, show_or_hide_options);
+              }
+
+              if (this.isshow) {
+                show_or_hide_animate.reverse();
+              } else {
+                show_or_hide_animate.play();
+              }
+
+            case 8:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, this);
+    }));
+
+    function runHideOrShowAnimation() {
+      return _runHideOrShowAnimation.apply(this, arguments);
     }
 
-    if (this.isshow) {
-      show_or_hide_animate.reverse();
-    } else {
-      show_or_hide_animate.play();
-    }
-  }
+    return runHideOrShowAnimation;
+  }()
 };
 exports.default = _default;}
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/ux-loader.js?type=import!./src/components/Mbox/index.ux?uxType=comp&name=mbox":
-/*!***************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/ux-loader.js?type=import!./src/components/Mbox/index.ux?uxType=comp&name=mbox ***!
-  \***************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/components/My/index.ux?uxType=comp":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/components/My/index.ux?uxType=comp ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function __scriptModule__ (module, exports, $app_require$){"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {};
+exports.default = _default;}
+
+/***/ }),
+
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!./src/components/Mbox/index.ux?uxType=comp&name=mbox":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!./src/components/Mbox/index.ux?uxType=comp&name=mbox ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $app_template$ = __webpack_require__(/*! !../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=comp& */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./src/components/Mbox/index.ux?uxType=comp&")
-var $app_style$ = __webpack_require__(/*! !../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!less-loader!../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=comp */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./src/components/Mbox/index.ux?uxType=comp")
-var $app_script$ = __webpack_require__(/*! !../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!../../../node_modules/babel-loader?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!../../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=comp */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/components/Mbox/index.ux?uxType=comp")
+var $app_template$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=comp& */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/components/Mbox/index.ux?uxType=comp&")
+var $app_style$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!less-loader!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=comp */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/components/Mbox/index.ux?uxType=comp")
+var $app_script$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!../../../node_modules/babel-loader?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=comp */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/components/Mbox/index.ux?uxType=comp")
 
 $app_define$('@app-component/mbox', [], function($app_require$, $app_exports$, $app_module$){
+     $app_script$($app_module$, $app_exports$, $app_require$)
+     if ($app_exports$.__esModule && $app_exports$.default) {
+            $app_module$.exports = $app_exports$.default
+        }
+     $app_module$.exports.template = $app_template$
+     $app_module$.exports.style = $app_style$
+})
+
+
+/***/ }),
+
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!./src/components/My/index.ux?uxType=comp&name=my":
+/*!***************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!./src/components/My/index.ux?uxType=comp&name=my ***!
+  \***************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $app_template$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=comp& */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/components/My/index.ux?uxType=comp&")
+var $app_style$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!less-loader!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=comp */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/components/My/index.ux?uxType=comp")
+var $app_script$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!../../../node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!../../../node_modules/babel-loader?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!../../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=comp */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/components/My/index.ux?uxType=comp")
+
+$app_define$('@app-component/my', [], function($app_require$, $app_exports$, $app_module$){
      $app_script$($app_module$, $app_exports$, $app_require$)
      if ($app_exports$.__esModule && $app_exports$.default) {
             $app_module$.exports = $app_exports$.default
@@ -937,10 +1104,11 @@ $app_define$('@app-component/mbox', [], function($app_require$, $app_exports$, $
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! !../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/ux-loader.js?type=import!../components/Mbox/index.ux?uxType=comp&name=mbox */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/ux-loader.js?type=import!./src/components/Mbox/index.ux?uxType=comp&name=mbox")
-var $app_template$ = __webpack_require__(/*! !../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=page&importNames[]=mbox */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/template-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page&importNames[]=mbox")
-var $app_style$ = __webpack_require__(/*! !../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=page */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/json-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/style-loader.js?index=0&type=style!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=style!./src/Main/index.ux?uxType=page")
-var $app_script$ = __webpack_require__(/*! !../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!../../node_modules/babel-loader?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/access-loader.js!../../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=page */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/jsx-loader.js&comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/access-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page")
+__webpack_require__(/*! !../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!../components/Mbox/index.ux?uxType=comp&name=mbox */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!./src/components/Mbox/index.ux?uxType=comp&name=mbox")
+__webpack_require__(/*! !../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!../components/My/index.ux?uxType=comp&name=my */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/ux-loader.js?type=import!./src/components/My/index.ux?uxType=comp&name=my")
+var $app_template$ = __webpack_require__(/*! !../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=page&importNames[]=mbox,importNames[]=my */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/template-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=template!./src/Main/index.ux?uxType=page&importNames[]=mbox,importNames[]=my")
+var $app_style$ = __webpack_require__(/*! !../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!less-loader!../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=page */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/json-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=style!./src/Main/index.ux?uxType=page")
+var $app_script$ = __webpack_require__(/*! !../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!../../node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!../../node_modules/babel-loader?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/access-loader.js!../../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=page */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=/home/mi/work/github/cnodejs-quickapp/node_modules/hap-toolkit/packager/lib/dsl/ux/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/access-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/Main/index.ux?uxType=page")
 
 $app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
      $app_script$($app_module$, $app_exports$, $app_require$)

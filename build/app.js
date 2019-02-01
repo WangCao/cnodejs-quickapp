@@ -1,5 +1,6 @@
 (function(){
   
+  var manifestJson = {"package":"com.application.demo","name":"CNODE","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/icon.jpg","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"},{"name":"system.share"},{"name":"system.fetch"},{"name":"system.storage"},{"name":"system.vibrator"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"debug"},"router":{"entry":"Main","pages":{"Main":{"component":"index"},"My":{"component":"index"},"Detail":{"component":"index"},"DemoDetail":{"component":"index"},"About":{"component":"index"}},"widgets":{"CardDemo":{"name":"CardDemo","decription":"快应用卡片展示","component":"index","path":"/CardDemo","features":[]}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Demo":{"titleBarText":"示例页","menu":false},"Detail":{"titleBarBackgroundColor":"#444","titleBarTextColor":"#fff"},"About":{"menu":false}}}}
   var createAppHandler = function() {
     return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -89,37 +90,37 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/_@babel_runtime@7.2.0@@babel/runtime/regenerator/index.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/_@babel_runtime@7.2.0@@babel/runtime/regenerator/index.js ***!
-  \********************************************************************************/
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/_regenerator-runtime@0.12.1@regenerator-runtime/runtime-module.js");
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime-module.js");
 
 /***/ }),
 
-/***/ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src/app.ux!./node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js?comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/app.ux?uxType=app":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src/app.ux!./node_modules/_babel-loader@8.0.5@babel-loader/lib?comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/app.ux?uxType=app ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src!./node_modules/babel-loader/lib/index.js?comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/app.ux?uxType=app":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src!./node_modules/babel-loader/lib?comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/app.ux?uxType=app ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function(module, exports, $app_require$){"use strict";
+module.exports = function __scriptModule__ (module, exports, $app_require$){"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./regenerator.js */ "./src/regenerator.js"));
-
 var _util = _interopRequireDefault(__webpack_require__(/*! ./util */ "./src/util.js"));
+
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./regenerator.js */ "./src/regenerator.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -127,16 +128,14 @@ var _default = {
   showMenu: _util.default.showMenu,
   createShortcut: _util.default.createShortcut
 };
-exports.default = _default;
-(exports.default || module.exports).manifest = {"package":"com.application.demo","name":"CNODE","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/icon.jpg","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"},{"name":"system.share"},{"name":"system.fetch"},{"name":"system.storage"},{"name":"system.vibrator"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"debug"},"router":{"entry":"Main","pages":{"Main":{"component":"index"},"My":{"component":"index"},"Detail":{"component":"index"},"DemoDetail":{"component":"index"},"About":{"component":"index"}},"widgets":{"CardDemo":{"name":"CardDemo","decription":"快应用卡片展示","component":"index","path":"/CardDemo","features":[]}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Demo":{"titleBarText":"示例页","menu":false},"Detail":{"titleBarBackgroundColor":"#444","titleBarTextColor":"#fff"},"About":{"menu":false}}}};
-}
+exports.default = _default;}
 
 /***/ }),
 
-/***/ "./node_modules/_regenerator-runtime@0.12.1@regenerator-runtime/runtime-module.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/_regenerator-runtime@0.12.1@regenerator-runtime/runtime-module.js ***!
-  \****************************************************************************************/
+/***/ "./node_modules/regenerator-runtime/runtime-module.js":
+/*!************************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -164,7 +163,7 @@ var hadRuntime = g.regeneratorRuntime && Object.getOwnPropertyNames(g).indexOf("
 var oldRuntime = hadRuntime && g.regeneratorRuntime; // Force reevalutation of runtime.js.
 
 g.regeneratorRuntime = undefined;
-module.exports = __webpack_require__(/*! ./runtime */ "./node_modules/_regenerator-runtime@0.12.1@regenerator-runtime/runtime.js");
+module.exports = __webpack_require__(/*! ./runtime */ "./node_modules/regenerator-runtime/runtime.js");
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -180,10 +179,10 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ "./node_modules/_regenerator-runtime@0.12.1@regenerator-runtime/runtime.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/_regenerator-runtime@0.12.1@regenerator-runtime/runtime.js ***!
-  \*********************************************************************************/
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -895,11 +894,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 function () {
   return this || (typeof self === "undefined" ? "undefined" : _typeof(self)) === "object" && self;
 }() || Function("return this")());
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../_webpack@4.29.0@webpack/buildin/module.js */ "./node_modules/_webpack@4.29.0@webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
-/***/ "./node_modules/_webpack@4.29.0@webpack/buildin/module.js":
+/***/ "./node_modules/webpack/buildin/module.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -943,13 +942,14 @@ module.exports = function (module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $app_script$ = __webpack_require__(/*! !../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src/app.ux!../node_modules/babel-loader?comments=false!../node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./app.ux?uxType=app */ "./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/script-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/module-loader.js!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src/app.ux!./node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js?comments=false!./node_modules/_hap-toolkit@0.1.1@hap-toolkit/packager/lib/webpack/loader/fragment-loader.js?index=0&type=script!./src/app.ux?uxType=app")
+var $app_script$ = __webpack_require__(/*! !../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!../node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!../node_modules/hap-toolkit/packager/lib/dsl/common/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src!../node_modules/babel-loader?comments=false!../node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./app.ux?uxType=app */ "./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/script-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/module-loader.js!./node_modules/hap-toolkit/packager/lib/dsl/common/loader/manifest-loader.js?path=/home/mi/work/github/cnodejs-quickapp/src!./node_modules/babel-loader/lib/index.js?comments=false!./node_modules/hap-toolkit/packager/lib/dsl/ux/loader/fragment-loader.js?index=0&type=script!./src/app.ux?uxType=app")
 
 $app_define$('@app-application/app', [], function($app_require$, $app_exports$, $app_module$){
      $app_script$($app_module$, $app_exports$, $app_require$)
      if ($app_exports$.__esModule && $app_exports$.default) {
-            $app_module$.exports = $app_exports$.default
+            $app_module$.exports = $app_exports$.default;
         }
+     $app_module$.exports['manifest'] = manifestJson;
 })
 
 $app_bootstrap$('@app-application/app',{ packagerVersion: '0.0.5'})
@@ -969,7 +969,7 @@ $app_bootstrap$('@app-application/app',{ packagerVersion: '0.0.5'})
 
 var injectRef = Object.getPrototypeOf(global) || global; // 注入regeneratorRuntime
 
-injectRef.regeneratorRuntime = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/_@babel_runtime@7.2.0@@babel/runtime/regenerator/index.js");
+injectRef.regeneratorRuntime = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 
 /***/ }),
 
@@ -1081,7 +1081,7 @@ exports.default = _default;
   else {
     window.createAppHandler = createAppHandler
     // H5注入manifest以获取features
-    global.manifest = {"package":"com.application.demo","name":"CNODE","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/icon.jpg","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"},{"name":"system.share"},{"name":"system.fetch"},{"name":"system.storage"},{"name":"system.vibrator"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"debug"},"router":{"entry":"Main","pages":{"Main":{"component":"index"},"My":{"component":"index"},"Detail":{"component":"index"},"DemoDetail":{"component":"index"},"About":{"component":"index"}},"widgets":{"CardDemo":{"name":"CardDemo","decription":"快应用卡片展示","component":"index","path":"/CardDemo","features":[]}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Demo":{"titleBarText":"示例页","menu":false},"Detail":{"titleBarBackgroundColor":"#444","titleBarTextColor":"#fff"},"About":{"menu":false}}}};
+    global.manifest = manifestJson;
   }
 })();
 //# sourceMappingURL=app.js.map

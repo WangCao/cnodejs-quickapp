@@ -8,9 +8,10 @@
 		<my-footer now=1></my-footer>
 	</div>
 </template>
-<style>
+<style lang="less">
+	@import '../Common/common.less';
 	.page-main {
-		color: #80bd01;
+		background-color: @base-background-color;
 	}
 </style>
 <script>
