@@ -28,7 +28,7 @@
 				<text style="color: {{now==0?'#80bd01':'#fff'}}">全部</text>
 			</div>
 			<div class="tab-btn">
-				<image src="/images/my{{now==1?'_1':''}}.png" />
+				<image src="/images/my{{now==1?'_1':''}}.svg" />
 				<text style="color: {{now==1?'#80bd01':'#fff'}}">我的</text>
 			</div>
 		</tab-bar>

@@ -12,7 +12,8 @@
     { "name": "system.share" },
     { "name": "system.fetch" },
     { "name": "system.storage" },
-    { "name": "system.vibrator" }
+    { "name": "system.vibrator" },
+    { "name": "system.barcode" }
   ],
   "permissions": [
     { "origin": "*" }

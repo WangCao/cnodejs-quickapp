@@ -20,5 +20,9 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "qrcode-js": "0.0.2"
+  },
+  "dependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0"
   }
 }

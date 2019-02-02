@@ -1,4 +1,5 @@
 const fetch = require('@system.fetch')
+const prompt = require('@system.prompt')
 
 let default_options = {
   responseType: 'json',
@@ -30,6 +31,21 @@ const request = function (url, data = {}, method = "GET", options = assignOption
     })
   })
 }
+
+const baseUrl = 'https://cnodejs.org/api/v1'
+
+const showLoading = function (msg = '',loadingColor = "#29B6F6") {
+  prompt.showLoading({
+    message: msg,
+    loadingColor: loadingColor
+  })
+}
+const hideLoading = function () {
+  prompt.hideLoading();
+} 
 export {
-  request
+  request,
+  baseUrl,
+  showLoading,
+  hideLoading
 }
