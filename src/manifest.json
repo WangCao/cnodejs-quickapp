@@ -60,9 +60,8 @@
         "menu": false
       },
       "Detail": {
-        
-        "titleBarBackgroundColor": "#444",
-        "titleBarTextColor": "#fff"
+        "fullScreen": true,
+        "titleBar": false
       },
       "About": {
         "menu": false
