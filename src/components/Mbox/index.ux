@@ -34,11 +34,11 @@
 
   .box-item {
     position: fixed;
-    width: @basel;
-    height: @basel;
+    width: @basel+20px;
+    height: @basel+20px;
     opacity: 0;
-    right: @position-right+10px;
-    bottom: @position-bottom+10px;
+    right: @position-right;
+    bottom: @position-bottom;
     z-index: 900;
     background-image: url('../../images/yuan2.png');
     background-size: contain;
