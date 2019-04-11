@@ -2,11 +2,12 @@
   /**
    * 应用级别的配置，供所有页面公用
    */
-  import util from './util'
-  import regenerator from './regenerator.js'
+  // import shortcut from '@system.shortcut'
+  import '../regenerator.js'
 
   export default {
-    showMenu: util.showMenu,
-    createShortcut: util.createShortcut,
+    onCreate() {
+
+    }
   }
 </script>

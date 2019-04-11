@@ -1,5 +1,5 @@
 {
-  "package": "com.application.demo",
+  "package": "com.miui.cnodejs",
   "name": "CNODE",
   "versionName": "1.0.0",
   "versionCode": "1",
@@ -27,9 +27,6 @@
       "Main": {
         "component": "index"
       },
-      "My": {
-        "component": "index"
-      },
       "Detail": {
         "component": "index"
       },
@@ -38,15 +35,6 @@
       },
       "About": {
         "component": "index"
-      }
-    },
-    "widgets": {
-      "CardDemo": {
-        "name": "CardDemo",
-        "decription": "快应用卡片展示",
-        "component": "index",
-        "path": "/CardDemo",
-        "features": []
       }
     }
   },
