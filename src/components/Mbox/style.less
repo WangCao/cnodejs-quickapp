@@ -1,0 +1,76 @@
+@basel: 80px;
+  @position-right: 10px;
+  @position-bottom: 200px;
+  @base-fontsize: 24px;
+  @base-transform: 120px;
+
+  .mbox {
+    position: fixed;
+    width: @basel+20px;
+    height: @basel+20px;
+    right: @position-right;
+    bottom: @position-bottom;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+
+    text {
+      font-size: @base-fontsize;
+    }
+  }
+
+  .box-item {
+    position: fixed;
+    width: @basel+20px;
+    height: @basel+20px;
+    opacity: 0;
+    right: @position-right;
+    bottom: @position-bottom;
+    z-index: 900;
+    background-image: url('../../images/yuan2.png');
+    background-size: contain;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    text {
+      font-weight: bold;
+    }
+  }
+
+  .main {
+    width: @basel;
+    height: @basel;
+    justify-content: center;
+    background-image: url('../../images/yuan.png');
+    background-size: contain;
+    background-color: cover;
+    text-align: center;
+
+    text {
+      color: #80bd01;
+    }
+  }
+
+  .animation-main {
+    animation-name: mainAnimation;
+    animation-duration: 800ms;
+    /* animation-iteration-count: infinite; */
+  }
+
+  @keyframes mainAnimation {
+    0% {
+      transform: scale(1, 1);
+    }
+
+    20% {
+      transform: scale(0.8, 0.8);
+    }
+
+    40% {
+      transform: scale(1.2, 1.2);
+    }
+
+    100% {
+      transform: scale(1, 1);
+    }
+  }
