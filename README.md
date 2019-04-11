@@ -14,16 +14,18 @@
 
 在`manifest.json`文件中设置 `loglevel`
 
-#### 2. 绘制 `canvas` ，需要在 `onShow` 生命周期中调用方法，`onCreate` 等觉得可以的均无效
-
-
-
 ```json
 "config": {
   "logLevel": "debug"
 },
 
 ```
+
+#### 2. 绘制 `canvas` 代码无效
+
+需要在 `onShow` 生命周期中调用方法，`onCreate` 等觉得可以的均无效
+
+
 
 ### 样式
 
